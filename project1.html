@@ -1,0 +1,658 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>CubeSat Project</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/project1.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<!-- <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>I am Strata</strong>, a super simple<br />
+					responsive site template freebie<br />
+					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>-->
+
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<header class="major">
+				<h1><u>2U CubeSat Frame Design</u></h1>
+			</header>
+			<ul class="actions">
+				<li> <a href="index.html" class="button primary">HOME</a> </li>
+				<li> <a href="project2.html" class="button primary">NEXT PROJECT</a></li>
+			</ul>
+			<h2>Introduction</h2>
+			<p><span class="image left"><img src="images/2U CubeSat.JPG" alt="" /></span>For my Fourth Year Design
+				Project, or Capstone Project, my team and I were tasked with designing the frame of a 2U cube satellite,
+				or CubeSat, with dimensions of 10x10x20cm for the University of Saskatchewan Space Team (USST). The
+				USST’s CubeSat, RADSAT-SK, Saskatchewan’s first home-grown satellite, is expected to launch in the Fall
+				of 2021. CubeSats offer quick, cost-effective, and standardized means of gaining access to space for
+				research. The payload of the CubeSat will be testing radiation sensors and radiation shielding.
+				<br>
+				<br>
+
+				Check out the full report: <a href="images/ME 495 Final Report Group 01.pdf">CubeSat Primary
+					Frame Design</a>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<hr>
+			<h2>Project Background</h2>
+			<p>Current commercial off the shelf
+				units do not easily accommodate the addition of secondary structure components such as attitude
+				determination systems, inhibit switches, or antennas. Additionally, off the shelf units are difficult to
+				service requiring complete disassembly of the frame. Although off the shelf units are lightweight, their
+				cost is hard to justify. <br><br>
+				The problem statement was created: a primary structure is required to maintain the structural integrity
+				of a CubeSat, which must interface and securely retain all internal components of the CubeSat while
+				meeting all requirements for spaceflight. <br><br>
+				The selected design should increase the ease of assembly and serviceability of the CubeSat while finding
+				a balance between manufacturing costs and reducing the overall frame mass. It is expected that the
+				CubeSat will be assembled and disassembled roughly 25 times before flight, meaning an easily serviceable
+				and simple design is critical. Below are the six objectives and their metrics, to measure how well the
+				objective is met:
+				<li>Serviceability - the number of fasteners</li>
+				<li>Ease of Assembly - steps to access CubeSat internals</li>
+				<li>Reduce Frame Mass - total frame mass</li>
+				<li>Ease of Manufacture - number of unique parts</li>
+				<li>Maximize Interior Envelope - interior volume</li>
+				<br>
+				Major constraints include adhering to requirements outlined by the launch
+				provider, NanoRacks. NanoRacks specifies several design driving features such as geometric tolerancing,
+				surface hardness, and minimum strength requirements. Additionally, the design must accomodate client
+				needs.
+			</p>
+			<hr>
+			<h2>The Design</h2>
+			<p>To achieve the goal of improving the sericeability of the CubeSat, our team 3-D printed a commercially
+				available frame design. When we assembled the off the shelf unit, was noticed that it was cumbersome to
+				assemble and serive the frame due to the number of parts, number of fasteners, and number of operations
+				required to access the payload (the frame had to be completely disassembled!). It was noticed that a
+				many of objectives can be met if the number of parts, unique parts, and fasteners are minimized.
+			</p>
+			<span class="image fit"><img src="images/A100-Frame-ASM.png" alt="" /></span>
+			<p>
+				The side panels feature the integration of a shear panel and vertical rails to reduce the number of
+				parts and the number of fasteners which aid to simplify the assembly of the frame. The side panels, made
+				from 6061-T6 aluminum, are
+				made identical to reduce the number of unique parts and result in a complex and multi-functional part.
+				The standoffs are used to fasten two side panels at right angles. The locating
+				ribs assist with assembly and improve the stiffness of the CubeSat. The "dog-bone cutout" is a feature
+				to retain a hystereis rod, required for the attitude determination systems. The side panels will also
+				secure the external solar panels and antenna, using Nitronic-60 SS threaded inserts (helicoils) to
+				preserve the
+				aluminum. The panels have an individual mass of 64.2 grams.
+			</p>
+			<span class="image fit"><img src="images/sidePanel1.JPG" alt="" /></span>
+			<p>
+				During the conceptual design phase, a geometrically artistic side panel design was developed (below,
+				left). There was no mathamatical reason for the geometry developed. During the detailed design phase,
+				SolidWorks Topology Optimization was used to determine the minimum material requirements (below,
+				center). The topology optimization indicated that the geometric cut-outs provided little structural
+				support based on the forces the frame will experience. Based on a buckling analysis, a single brace and
+				a stiffening rib was retained to improve confidence in the design. Removing the geometric cut-outs
+				realized
+				a 14.5% mass savings.
+			</p>
+			<span class="image fit"><img src="images/Side Panels Itterative.png" alt="" /></span>
+			<p>
+				The payload, a stack of PCB's, will be sandwiched between two square cross members, shown below. The
+				payload will be connected two the four holes on the top of the cross member. The cross member will be
+				made from 6061-T6 aluminum and have an individual mass of 25.5 grams. The cross member will locate in
+				the ribs on the side panels and will be secured with a single fastener per side.
+			</p>
+			<span class="image fit"><img src="images/squareXMember.JPG" alt="" /></span>
+			<p>
+				The client required a method for retaining four magnets, required for the attitude determination
+				systems. The four magnets are held within the magnet holder assembly, shown below. The magnet holder
+				cross member and magnet caps will both be made from 6061-T6 aluminum. The mass of the magnet cross
+				member is 38.5 grams. This assembly will locate into ribs on the side panels and will be secured by 8
+				fasteners. A solar panel can be mounted on the bottom of the assembly via four more fasteners.
+			</p>
+			<span class="image fit"><img src="images/magnetXMember.JPG" alt="" /></span>
+			<hr>
+			<h2>Results</h2>
+			<p>
+				<li>The final design has a mass of 371 grams. Off the shelf units were found to have a mass ranging
+					from 280-320 grams. The mass increase was justified by the increased functionality the design
+					provides over a "one-size-fits-all" approach of off the shelf units.</li>
+				<li>The frame has a total of 32 fasteners to assemble the frame. Only 12 fasteners need to be removed
+					to gain access to two sides of the payload.</li>
+				<li>The design has 3 unique parts for the primary frame for a total of 7 parts. Compared to off the
+					shelf units, our design has significantly less parts (varies depending on commercial unit).</li>
+				<li>The cost the manufacture the frame was estimated at $4,300 CAD. Off the shelf units were found to
+					range from $5000-$8000 CAD, so our design is very competitive in that regard.</li>
+				<li>Under acceleration forces from the rocket launch and random vibrations, the frame experiences a
+					maximum deflection of 0.309 mm and a maximum stress of 68.4 MPa. These deflections and stresses are
+					deemed acceptable and are no cause for concern.</li>
+			</p>
+
+			<!--	<p>
+				Some of the calculations and FEA models were:
+				<li>Euler Buckling for the critical buckling force</li>
+				<li>Constiglianos Energy Methods to determine local deflections</li>
+				<li>Fastener preload and shear strength</li>
+				<li>FEA of combined forces for max stress and max deflection</li>
+				<li>Modal vibrations and vibrational stresses and delfections</li>
+			</p>
+			<p><span class="image right"><img src="images/Equivalent Stress_WB.png" alt="" /></span>To the right is an
+				image for the combined FEA analysis where all the forces the frame will experience are
+				modeled. It was determined that the frame will see a maximum stress of 20.6 MPa, where the yeild
+				strength of 6061-T6 aluminum is 276 MPa. The largest stresses are seen where the payload is attached to
+				the frame and along the rails of the frame, which is expected and ideal.
+			</p>-->
+			<hr>
+			<h2>Conclusions</h2>
+			<p>
+				This brief overview does not come close to doing justice the 723 hours my team and I spent working on
+				this project. Through an iterative and creative design process, a design that is unique from off the
+				shelf products was achieved. By having integrated rails and shear panels, the number of unique parts was
+				greatly recuded. Adding locating ribs reducded the number of fasteners, the ease of assembly, and
+				improved the frame rigidity. The frame will experience a maximum deflection of 0.309 mm and a maximum
+				stress of 68.4 MPa. The design adheres to the many requirements outlined by the launch provided,
+				NanoRacks, and by the client, the USST. My team places high confidence in the sucess of the design in
+				series from practical iterative design approach and rigorous analysis.
+			</p>
+			<hr>
+			<h2>Drawings</h2>
+			<p>
+				Below are some of the drawings developed to assist in the fabrication of the prototype frame. The
+				drawings hold the role of communicating fits and tolerances of parts to ensure proper fit during
+				assembly and service.
+			</p>
+			<div class="box alt">
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-4"><a href="images/drawings/P100-1.png" class="image fit thumb"><img
+								src="images/drawings/P100-1.png" alt="" /></a></div>
+					<div class="col-4"><a href="images/drawings/P100-2.png" class="image fit thumb"><img
+								src="images/drawings/P100-2.png" alt="" /></a></div>
+					<div class="col-4"><a href="images/drawings/P100-3.png" class="image fit thumb"><img
+								src="images/drawings/P100-3.png" alt="" /></a></div>
+					<!-- Break -->
+					<div class="col-4"><a href="images/drawings/P100-4.png" class="image fit thumb"><img
+								src="images/drawings/P100-4.png" alt="" /></a></div>
+					<div class="col-4"><a href="images/drawings/P101.PNG" class="image fit thumb"><img
+								src="images/drawings/P101.PNG" alt="" /></a></div>
+					<div class="col-4"><a href="images/drawings/P102.PNG" class="image fit thumb"><img
+								src="images/drawings/P102.PNG" alt="" /></a></div>
+					<!-- Break -->
+					<div class="col-4"><a href="images/drawings/P103.PNG" class="image fit thumb"><img
+								src="images/drawings/P103.PNG" alt="" /></a></div>
+					<div class="col-4"><a href="images/drawings/P107.PNG" class="image fit thumb"><img
+								src="images/drawings/P107.PNG" alt="" /></a></div>
+					<div class="col-4"><a href="images/drawings/P111.png" class="image fit thumb"><img
+								src="images/drawings/P111.png" alt="" /></a></div>
+				</div>
+			</div>
+			<hr>
+			<h2>Acknowledgements</h2>
+			<p>
+				I want to acknowledge:
+				<li> Team Members: Seamus Woodward-George, Aaron Peters, and Brendon Entz</li>
+				<li> Clients: Justin Gerein (SRI), Addi Amaya (USST), Alexandra Hynes (USST)</li>
+				<li> Professors and Program Organizers: Dr. Chris Zhang, Dr. Allan Dolovich, Dr. JD. Johnston, Dr. Reza
+					Fotouhi, Jocelyn Peltier-Huntley (University of Saskatchewan)</li>
+			</p>
+
+			<!--<ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul>
+					
+
+						<h3>Left &amp; Right</h3>
+									<p><span class="image left"><img src="images/pic08.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+									<p><span class="image right"><img src="images/pic09.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+
+					
+					
+					-->
+		</section>
+
+		<!-- Two 
+					<section id="two">
+						<h2>Recent Work</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<h3>Magna sed consequat tempus</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+								<h3>Ultricies lacinia interdum</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+								<h3>Tortor metus commodo</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+								<h3>Quam neque phasellus</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+								<h3>Nunc enim commodo aliquet</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+								<h3>Risus ornare lacinia</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+						</div>
+						<ul class="actions">
+							<li><a href="#" class="button">Full Portfolio</a></li>
+						</ul>
+					</section>-->
+
+		<!-- Three 
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<form method="post" action="#">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+										1234 Somewhere Rd.<br />
+										Nashville, TN 00000<br />
+										United States
+									</li>
+									<li>
+										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+										000-000-0000
+									</li>
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="#">hello@untitled.tld</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>-->
+
+		<!-- Four -->
+		<!--
+					<section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="col-6 col-12-xsmall">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button primary small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Primary</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button large">Large</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button primary fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button primary disabled">Primary</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<select name="demo-category" id="demo-category">
+											<option value="">- Category -</option>
+											<option value="1">Manufacturing</option>
+											<option value="1">Shipping</option>
+											<option value="1">Administration</option>
+											<option value="1">Human Resources</option>
+										</select>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="col-12">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				-->
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>-->
+
+				<li><a href="https://www.linkedin.com/in/daniel-franko-304132105/" class="icon brands fa-linkedin"><span
+							class="label">LinkedIn</span></a></li>
+				<li><a class="icon solid fa-envelope"><span class="label">Email</span> <a
+							href="#">daniel.franko3@gmail.com</a></li>
+			</ul>
+			<ul> check out my resume <a href="images/Resume - Daniel Franko.pdf">here</a></ul>
+			<ul class="copyright">
+				<li>&copy; Daniel Franko 2020</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

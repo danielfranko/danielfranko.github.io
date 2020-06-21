@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Robotic Arm</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/project2.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<!-- <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>I am Strata</strong>, a super simple<br />
+					responsive site template freebie<br />
+					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>-->
+
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<header class="major">
+				<h1><u>Robotic Arm</u></h1>
+			</header>
+			<ul class="actions">
+				<li> <a href="index.html" class="button primary">HOME</a> </li>
+				<li> <a href="project1.html" class="button primary">PREVIOUS PROJECT</a></li>
+				<li> <a href="project3.html" class="button primary">NEXT PROJECT</a></li>
+			</ul>
+			<h2>Introduction</h2>
+			<p>
+				The Canadian International Rover Challenge (CIRC) held in Drumheller, AB and the University Rover
+				Challenge (URC) held in Hanksville, UT are two competitions where university student teams design and
+				build a Mars Rover prototype. The teams compete in simulated tasks similar to tasks required of a rover
+				on Mars. Such tasks are called Extreme Retrieval and Delivery Mission or Equipment Servicing or Search &
+				Rescue where a teleoperated rover is required to interface with its surroundings. The use of a robotic
+				arm is essential to access and manipulate objects in the rover’s immediate area accurately and easily.
+				There are many considerations and requirements when designing a robotic arm. From competition guidelines
+				and working of past designs of robotic arms, here are a few requirements that this arm was designed to:
+				<li>Lift a payload of 2.5kg</li>
+				<li>Maximum reach of 1m, based on where the arm sits on the rover that the arm is able to reach a few
+					inches below ground level</li>
+				<li>6 degrees of freedom (three rotational and three translational axis)</li>
+				<li>Continuous rotation at the joints to allow for a larger operating field as well as complete tasks
+					such as rotating a screwdriver continuously</li>
+				<li>Sufficiently rigid so that driving over rough terrain will not break the arm</li>
+
+			</p>
+			<hr>
+			<h2>The Design</h2>
+			<p>The arm used a combination of carbon fiber tubes and plates, CNC machined aluminum parts, and 3-D
+				printing for the main construction. The three main joints of the arm are the shoulder, elbow, and wrist.
+				Each joint has two degrees of freedom, rotational and translational. Working from the bottom up, each of
+				the six axes will be described below.
+			</p>
+
+			<h3><u>Axis 1 - Shoulder Rotation</u></h3>
+			<p>The base of the arm is paramount as it provides the rigidity for the rest of the arm. The first iteration
+				of the design used a large 3-D printed U-Support and worm gear, shown below. The assembly interfaced to
+				the rover via a stiff foam cored carbon fiber plate. The U-Support rested on a bearing plate. The large
+				base provided a stable foundation. The design was scrapped after prototyping due to its large mass, poor
+				quality of the 3-D printed worm gear and drive causing jamming, issues with cable routing through the
+				part, and the retention cap needed a needle bearing for smoother operation.
+			</p>
+			<span class="image fit"><img src="images/ARM/wormBase.PNG" alt="" /></span>
+			<p>
+				The final iteration used a bent aluminum bracket to support the arm and was driven by a spur gear, as
+				seen below. Although the area base is smaller, the design proved to be sufficiently rigid when driving
+				over rough terrain. This version also addressed aforementioned issues by reducing the mass, having a
+				smoother operation, and easier cable routing.
+			</p>
+			<span class="image fit"><img src="images/ARM/slewBase.PNG" alt="" /></span>
+			<h3><u>Axis 2 - Shoulder Translation</u></h3>
+			<p>
+				The three translational axes will see the largest load requirements having to lift both the arm itself
+				and the payload. A gearbox is required to reduce the motor output speed and increase the output torque.
+				Gearboxes can be (for our gear reduction of ~250:1) expensive, heavy, and are not common in a flange
+				output style. Experiments on a new style gearbox, called a cycloidal gearbox, was complete by previous
+				team members with promising results.
+			</p>
+			<p>
+				A cycloidal gearbox uses an eccentric spinner on the motor shaft to spin a two-stage rotor. The lower
+				stage pushes off the motor housing. The upper stage rotates the output flange, resulting in a custom
+				gear ratio, easily manufacturable, efficient, and compact gearbox. Below is an annotated image of the
+				different parts of the gearbox. The gearbox below has a 256:1 reduction.
+			</p>
+			<span class="image fit"><img src="images/ARM/shoulderTrans.PNG" alt="" /></span>
+			<h3><u>Axis 3 - Elbow Translation</u></h3>
+			<p>
+				The elbow translation axis has the same concept as the shoulder translation axis, also with a 256:1
+				reduction but a smaller motor. An annotated CAD image can be seen below.
+			</p>
+			<span class="image fit"><img src="images/render_arm_2_EDIT.jpg" alt="" /></span>
+			<h3><u>Axis 4 - Elbow Rotation</u></h3>
+			<p>
+				The elbow rotation uses a small DC motor to rotate itself and the rest of the arm around a fixed gear,
+				with respect to the elbow motor housing. A needle bearing and a thrust bearing ensure good alignment and
+				smooth rotation under load.
+			</p>
+			<span class="image fit"><img src="images/render_arm_3.png" alt="" /></span>
+			<h3><u>Axis 5 & 6 - Wrist Translation and Rotation</u></h3>
+			<p>
+				Axis 5 & 6 have the same concpets as the elbow joint, using a cycloidal gearbox for the translational
+				reduction and a spur gear driven rotation. Below is an annotated drawing of the fifth and sixth axes.
+			</p>
+			<span class="image fit"><img src="images/ARM/wrist.PNG" alt="" /></span>
+			<hr>
+			<h2>Manufacturing</h2>
+			<p>
+				The CNC machined aluminum parts were made from 6061-T6 aluminum. 3-D printed parts were made from a
+				carbon fiber infused PLA, resulting in tougher and more durable parts over regular PLA.
+			</p>
+			<div class="box alt">
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-4"><a href="images/ARM/man1.0.jpg" class="image fit thumb"><img
+								src="images/ARM/man1.0.jpg" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/man1.1.jpg" class="image fit thumb"><img
+								src="images/ARM/man1.1.jpg" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/man2.jpg" class="image fit thumb"><img
+								src="images/ARM/man2.jpg" alt="" /></a></div>
+					<!-- Break -->
+					<div class="col-4"><a href="images/ARM/man3.jpg" class="image fit thumb"><img
+								src="images/ARM/man3.jpg" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/man4.jpg" class="image fit thumb"><img
+								src="images/ARM/man4.jpg" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/man5.jpg" class="image fit thumb"><img
+								src="images/ARM/man5.jpg" alt="" /></a></div>
+					<!-- Break -->
+					<div class="col-4"><a href="images/ARM/man7.jpg" class="image fit thumb"><img
+								src="images/ARM/man7.jpg" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/man8.jpg" class="image fit thumb"><img
+								src="images/ARM/man8.jpg" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/man9.jpg" class="image fit thumb"><img
+								src="images/ARM/man9.jpg" alt="" /></a></div>
+					<!-- Break -->
+					<div class="col-4"><a href="images/ARM/man10.jpg" class="image fit thumb"><img
+								src="images/ARM/man10.jpg" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/man11.jpg" class="image fit thumb"><img
+								src="images/ARM/man11.jpg" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/man12.jpg" class="image fit thumb"><img
+								src="images/ARM/man12.jpg" alt="" /></a></div>
+				</div>
+			</div>
+			<br>
+			Testing the wrist motion!
+			<span class="image fit"><img src="images/ARM/ezgif.com-video-to-gif.gif" alt="" /></span>
+			<hr>
+			<h2>Drawings</h2>
+			<p>
+				Below are some of the drawings developed to assist in the fabrication of the CNC machined parts. The
+				drawings hold the role of communicating fits and tolerances of parts to ensure proper fit during
+				assembly and service.
+			</p>
+			<div class="box alt">
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P004C-SHOULDER MOTOR HOUSING-1.png" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P004C-SHOULDER MOTOR HOUSING-1.PNG" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P006D-SHOULDER 16 NODE STACKED ROTOR-1.PNG" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P006D-SHOULDER 16 NODE STACKED ROTOR-1.PNG" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P008D-SHOULDER FLANGED OUTPUT CAP-1.PNG" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P008D-SHOULDER FLANGED OUTPUT CAP-1.PNG" alt="" /></a></div>
+					<!-- Break -->
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P009C-SHOULDER DRIVE RETAINING CAP-1.PNG" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P009C-SHOULDER DRIVE RETAINING CAP-1.PNG" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P013D-ELBOW MOTOR HOUSING-1.PNG" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P013D-ELBOW MOTOR HOUSING-1.PNG" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P015D-ELBOW MOTOR, ECCENTRIC MOTOR OUTPUT SHAFT-1.PNG" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P015D-ELBOW MOTOR, ECCENTRIC MOTOR OUTPUT SHAFT-1.PNG" alt="" /></a></div>
+					<!-- Break -->
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P027-FOREARM ROTATION MOTOR PLATE-1.png" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P027-FOREARM ROTATION MOTOR PLATE-1.png" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P028-WRIST OUTPUT AND GRIPPER ADAPTER-1.png" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P027-FOREARM ROTATION MOTOR PLATE-1.png" alt="" /></a></div>
+					<div class="col-4"><a href="images/ARM/drawings/ARM1819-P034B-WRIST OUTPUT CAP-1.png" class="image fit thumb"><img
+								src="images/ARM/drawings/ARM1819-P034B-WRIST OUTPUT CAP-1.png" alt="" /></a></div>
+				</div>
+			</div>
+			
+
+			<!--<ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul>
+					
+
+						<h3>Left &amp; Right</h3>
+									<p><span class="image left"><img src="images/pic08.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+									<p><span class="image right"><img src="images/pic09.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+
+					
+					
+					-->
+		</section>
+
+		<!-- Two 
+					<section id="two">
+						<h2>Recent Work</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<h3>Magna sed consequat tempus</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+								<h3>Ultricies lacinia interdum</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+								<h3>Tortor metus commodo</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+								<h3>Quam neque phasellus</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+								<h3>Nunc enim commodo aliquet</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+								<h3>Risus ornare lacinia</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+						</div>
+						<ul class="actions">
+							<li><a href="#" class="button">Full Portfolio</a></li>
+						</ul>
+					</section>-->
+
+		<!-- Three 
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<form method="post" action="#">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+										1234 Somewhere Rd.<br />
+										Nashville, TN 00000<br />
+										United States
+									</li>
+									<li>
+										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+										000-000-0000
+									</li>
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="#">hello@untitled.tld</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>-->
+
+		<!-- Four -->
+		<!--
+					<section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="col-6 col-12-xsmall">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button primary small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Primary</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button large">Large</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button primary fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button primary disabled">Primary</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<select name="demo-category" id="demo-category">
+											<option value="">- Category -</option>
+											<option value="1">Manufacturing</option>
+											<option value="1">Shipping</option>
+											<option value="1">Administration</option>
+											<option value="1">Human Resources</option>
+										</select>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="col-12">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				-->
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>-->
+
+				<li><a href="https://www.linkedin.com/in/daniel-franko-304132105/" class="icon brands fa-linkedin"><span
+							class="label">LinkedIn</span></a></li>
+				<li><a class="icon solid fa-envelope"><span class="label">Email</span> <a
+							href="#">daniel.franko3@gmail.com</a></li>
+			</ul>
+			<ul> check out my resume <a href="images/Resume - Daniel Franko.pdf">here</a></ul>
+			<ul class="copyright">
+				<li>&copy; Daniel Franko 2020</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
